@@ -29,5 +29,3 @@
         {/each}
     </div>
 </body>
-
-<style></style>
