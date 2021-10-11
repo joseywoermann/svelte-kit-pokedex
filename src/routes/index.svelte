@@ -20,8 +20,8 @@
 </svelte:head>
 
 <body>
-    <h1 class="text-4xl text-center my-8 uppercase">Svelte Kit Pokedex</h1>
-    <input class="w-full rounded-md text-lg p-4 border-2 border-gray-200" type="text" placeholder="Search Pokemon" bind:value={searchTerm}>
+    <h1 class="header">Svelte Kit Pokedex</h1>
+    <input class="search" type="text" placeholder="Search Pokemon" bind:value={searchTerm}>
 
     <div class="py-4 grid gap-4 md:grid-cols-2 grid-cols-1">
         {#each filteredPokeman as pokeman}
@@ -29,3 +29,15 @@
         {/each}
     </div>
 </body>
+
+
+<style type="text/postcss">
+    .header {
+        @apply text-4xl text-center my-8 uppercase;
+    }
+
+    .search {
+      @apply w-full rounded-md text-lg p-4 border-2 border-gray-200;
+    }
+</style>
+  
